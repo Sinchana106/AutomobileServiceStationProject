@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,600,700,900%7COpen+Sans:300,400,600,700,800" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
+
+
+
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <div class="jumbotron">
+        <span style="float:left"><img src="~/Images/logo.jpg" /></span>
+
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @Html.ActionLink("RN Automotive and Refregeration", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                        <li>@Html.ActionLink("Services", "Services", "Home")</li>
+                        <li>@Html.ActionLink("Payment", "Payment", "Home")</li>
+                    </ul>
+                    @Html.Partial("_LoginPartial")
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        </div>
+        <hr />
+        <footer style="background-color:black;color:grey">
+
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h2 class="font-weight-semibold text-1 mb-3">ABOUT RN AUTOMOTIVE &amp; REFRIGERATION</h2>
+                    <p>We are a multibrand car service center with the facility of modern tools and equipment’s used to diagnoses fault, then our technical expertise who, undergone advanced trainings will repair and fix the trouble on your cars. Our unique abilities we can look after all makes of the vehicles.</p>
+                </div>
+                <div class="col-lg-4 ml-auto mb-4 mb-lg-0">
+                    <h2 class="font-weight-semibold text-1 mb-3">OUR LOCATION</h2>
+                    <ul class="list list-unstyled">
+                        <li class="mb-2"><i class="fas fa-angle-right mr-2 ml-1"></i> <strong class="text-color-light">Address:</strong> 46/22, Nyanappanahalli, Akshay Nagar, Bengaluru, India</li>
+                        <li class="mb-2"><i class="fas fa-angle-right mr-2 ml-1"></i> <strong class="text-color-light">Phone:</strong> <a href="tel:+917338335082">(91) 733-833-5082</a></li>
+                        <li class="mb-2"><i class="fas fa-angle-right mr-2 ml-1"></i> <strong class="text-color-light">Email:</strong> <a href="mailto:info@rnautomotive.com" class="link-underline-light">info@rnautomotive.com</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h2 class="font-weight-semibold text-1 mb-3">QUICK LINKS</h2>
+                    <ul class="list list-unstyled">
+                        <li class="mb-2"> <a href="~/Home/Index">Home</a></li>
+                        <li class="mb-2"> <a href="~/Home/About">About Us</a></li>
+                        <li class="mb-2"><a href="~/Home/Services">Services</a></li>
+                        <li class="mb-2"><a href="~/Home/Contact">Contact Us</a></li>
+                        <li class="mb-2"><a href="~/Home/Payment">Payment</a></li>
+                    </ul>
+                </div>
+            </div>
+  
+    <span class="footer-copyright">
+        <span class="container">
+            <span >
+                <span class="col-md-7 col-lg-8" style="padding-right:30px;">
+                
+                     <a href="http://www.facebook.com/RNautoNref" target="_blank" title="RN Automotive Facebook Page"><img src="~/Images/fb.png" width="25" /></a>
+                    <a href="http://www.linkedin.com/company/rn-automotive-refrigeration" target="_blank" title="RN Automotive LinkedIn Profile"><img src="~/Images/linkedIn.png" width="25" /></a>
+                      <a href="http://www.instagram.com/rnautomotive" target="_blank" title="RN Automotive Instagram Page"><img src="~/Images/insta.png" width="25" /></a>
+                   
+                </span>
+                <span class="col-md-5 col-lg-4">
+                    <p class="text-md-right pb-0 mb-0">Visit us on our social media pages to stay in touch.</p>
+                </span>
+            </span>
+        </span>
+    </span>
+    
+    <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+
+    </footer>
+    
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
