@@ -15,6 +15,7 @@ namespace AutomobileServiceStation.Models
         public int serviceID { get; set; }
         public Service service { get; set; }
         public string desc { get; set; }
+        public float cost { get; set; }
 
     }
 }

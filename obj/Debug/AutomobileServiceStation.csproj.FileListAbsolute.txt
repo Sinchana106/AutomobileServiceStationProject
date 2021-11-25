@@ -215,3 +215,4 @@ D:\Visual Studio 2019 projects\InternshipProject\obj\Debug\AutomobileServiceStat
 D:\Visual Studio 2019 projects\InternshipProject\obj\Debug\AutomobileServiceStation.Migrations.InitialCreate.resources
 D:\Visual Studio 2019 projects\InternshipProject\obj\Debug\AutomobileServiceStation.csproj.GenerateResource.cache
 D:\Visual Studio 2019 projects\InternshipProject\obj\Debug\AutomobileServiceStation.Migrations.ServiceContext.resources
+D:\Visual Studio 2019 projects\InternshipProject\obj\Debug\AutomobileServiceStation.Migrations.ServiceCost.resources

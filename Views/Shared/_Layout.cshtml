@@ -24,85 +24,86 @@
 
 </head>
 <body>
-    <div class="jumbotron">
-        <span style="float:left"><img src="~/Images/logo.jpg" /></span>
+    <!--  <div class="jumbotron">
+          <span style="float:left"><img src="~/Images/logo.jpg" /></span>
 
-        <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <div class="navbar navbar-inverse navbar-fixed-top">
+              <div class="container">
+                  <div class="navbar-header">
+                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    @Html.ActionLink("RN Automotive and Refregeration", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-                </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                        <li>@Html.ActionLink("About", "About", "Home")</li>
-                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                        <li>@Html.ActionLink("Services", "Services", "Home")</li>
-                        <li>@Html.ActionLink("Payment", "Payment", "Home")</li>
-                    </ul>
-                    @Html.Partial("_LoginPartial")
-                </div>
-            </div>
-        </div>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                      </button>-->
+    <div class="container body-content">
+
+        <span style="float:left"><img src="~/Images/logo.jpg" width="100" /></span>
+        <table width="1000px" style="background-color:black;color:lightgray;">
+            <tr>
+                <td>@Html.ActionLink("Home", "Index", "Home", new { @class = "btn btn-default" })</td>
+                <td>@Html.ActionLink("Contact", "Contact", "Home", new { @class = "btn btn-default" })</td>
+                <td>@Html.ActionLink("Services", "Services", "Home", new { @class = "btn btn-default" })</td>
+                <td>@Html.ActionLink("Payment", "Payment", "Home", new { @class = "btn btn-default" })</td>
+                <td>  @Html.Partial("_LoginPartial")</td>
+            </tr>
+        </table>
+            @Html.ActionLink("RN Automotive and Refregeration", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
     </div>
+  
+    
     <div class="container body-content">
         @RenderBody()
-        </div>
-        <hr />
-        <footer style="background-color:black;color:grey">
+    </div>
+    <hr />
+    <footer style="background-color:black;color:grey">
 
-            <div class="row">
-                <div class="col-lg-4 mb-4 mb-lg-0">
-                    <h2 class="font-weight-semibold text-1 mb-3">ABOUT RN AUTOMOTIVE &amp; REFRIGERATION</h2>
-                    <p>We are a multibrand car service center with the facility of modern tools and equipment’s used to diagnoses fault, then our technical expertise who, undergone advanced trainings will repair and fix the trouble on your cars. Our unique abilities we can look after all makes of the vehicles.</p>
-                </div>
-                <div class="col-lg-4 ml-auto mb-4 mb-lg-0">
-                    <h2 class="font-weight-semibold text-1 mb-3">OUR LOCATION</h2>
-                    <ul class="list list-unstyled">
-                        <li class="mb-2"><i class="fas fa-angle-right mr-2 ml-1"></i> <strong class="text-color-light">Address:</strong> 46/22, Nyanappanahalli, Akshay Nagar, Bengaluru, India</li>
-                        <li class="mb-2"><i class="fas fa-angle-right mr-2 ml-1"></i> <strong class="text-color-light">Phone:</strong> <a href="tel:+917338335082">(91) 733-833-5082</a></li>
-                        <li class="mb-2"><i class="fas fa-angle-right mr-2 ml-1"></i> <strong class="text-color-light">Email:</strong> <a href="mailto:info@rnautomotive.com" class="link-underline-light">info@rnautomotive.com</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3">
-                    <h2 class="font-weight-semibold text-1 mb-3">QUICK LINKS</h2>
-                    <ul class="list list-unstyled">
-                        <li class="mb-2"> <a href="~/Home/Index">Home</a></li>
-                        <li class="mb-2"> <a href="~/Home/About">About Us</a></li>
-                        <li class="mb-2"><a href="~/Home/Services">Services</a></li>
-                        <li class="mb-2"><a href="~/Home/Contact">Contact Us</a></li>
-                        <li class="mb-2"><a href="~/Home/Payment">Payment</a></li>
-                    </ul>
-                </div>
+        <div class="row">
+            <div class="col-lg-4 mb-4 mb-lg-0">
+                <h2 class="font-weight-semibold text-1 mb-3">ABOUT RN AUTOMOTIVE &amp; REFRIGERATION</h2>
+                <p>We are a multibrand car service center with the facility of modern tools and equipment’s used to diagnoses fault, then our technical expertise who, undergone advanced trainings will repair and fix the trouble on your cars. Our unique abilities we can look after all makes of the vehicles.</p>
             </div>
-  
-    <span class="footer-copyright">
-        <span class="container">
-            <span >
-                <span class="col-md-7 col-lg-8" style="padding-right:30px;">
-                
-                     <a href="http://www.facebook.com/RNautoNref" target="_blank" title="RN Automotive Facebook Page"><img src="~/Images/fb.png" width="25" /></a>
-                    <a href="http://www.linkedin.com/company/rn-automotive-refrigeration" target="_blank" title="RN Automotive LinkedIn Profile"><img src="~/Images/linkedIn.png" width="25" /></a>
-                      <a href="http://www.instagram.com/rnautomotive" target="_blank" title="RN Automotive Instagram Page"><img src="~/Images/insta.png" width="25" /></a>
-                   
-                </span>
-                <span class="col-md-5 col-lg-4">
-                    <p class="text-md-right pb-0 mb-0">Visit us on our social media pages to stay in touch.</p>
+            <div class="col-lg-4 ml-auto mb-4 mb-lg-0">
+                <h2 class="font-weight-semibold text-1 mb-3">OUR LOCATION</h2>
+                <ul class="list list-unstyled">
+                    <li class="mb-2"><i class="fas fa-angle-right mr-2 ml-1"></i> <strong class="text-color-light">Address:</strong> 46/22, Nyanappanahalli, Akshay Nagar, Bengaluru, India</li>
+                    <li class="mb-2"><i class="fas fa-angle-right mr-2 ml-1"></i> <strong class="text-color-light">Phone:</strong> <a href="tel:+917338335082">(91) 733-833-5082</a></li>
+                    <li class="mb-2"><i class="fas fa-angle-right mr-2 ml-1"></i> <strong class="text-color-light">Email:</strong> <a href="mailto:info@rnautomotive.com" class="link-underline-light">info@rnautomotive.com</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3">
+                <h2 class="font-weight-semibold text-1 mb-3">QUICK LINKS</h2>
+                <ul class="list list-unstyled">
+                    <li class="mb-2"> <a href="~/Home/Index">Home</a></li>
+                    <li class="mb-2"> <a href="~/Home/About">About Us</a></li>
+                    <li class="mb-2"><a href="~/Home/Services">Services</a></li>
+                    <li class="mb-2"><a href="~/Home/Contact">Contact Us</a></li>
+                    <li class="mb-2"><a href="~/Home/Payment">Payment</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <span class="footer-copyright">
+            <span class="container">
+                <span>
+                    <span class="col-md-7 col-lg-8" style="padding-right:30px;">
+
+                        <a href="http://www.facebook.com/RNautoNref" target="_blank" title="RN Automotive Facebook Page"><img src="~/Images/fb.png" width="25" /></a>
+                        <a href="http://www.linkedin.com/company/rn-automotive-refrigeration" target="_blank" title="RN Automotive LinkedIn Profile"><img src="~/Images/linkedIn.png" width="25" /></a>
+                        <a href="http://www.instagram.com/rnautomotive" target="_blank" title="RN Automotive Instagram Page"><img src="~/Images/insta.png" width="25" /></a>
+
+                    </span>
+                    <span class="col-md-5 col-lg-4">
+                        <p class="text-md-right pb-0 mb-0">Visit us on our social media pages to stay in touch.</p>
+                    </span>
                 </span>
             </span>
         </span>
-    </span>
-    
-    <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+
+        <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
 
     </footer>
-    
+
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")

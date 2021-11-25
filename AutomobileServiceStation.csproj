@@ -182,12 +182,17 @@
     <Compile Include="Migrations\202111161205321_ServiceContext.Designer.cs">
       <DependentUpon>202111161205321_ServiceContext.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202111191546471_ServiceCost.cs" />
+    <Compile Include="Migrations\202111191546471_ServiceCost.Designer.cs">
+      <DependentUpon>202111191546471_ServiceCost.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Service.cs" />
     <Compile Include="Models\ServiceContext.cs" />
+    <Compile Include="Models\ServiceCost.cs" />
     <Compile Include="Models\ServiceSubType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -315,6 +320,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202111161205321_ServiceContext.resx">
       <DependentUpon>202111161205321_ServiceContext.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111191546471_ServiceCost.resx">
+      <DependentUpon>202111191546471_ServiceCost.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
