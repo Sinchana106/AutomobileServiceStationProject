@@ -216,3 +216,9 @@ D:\Visual Studio 2019 projects\InternshipProject\obj\Debug\AutomobileServiceStat
 D:\Visual Studio 2019 projects\InternshipProject\obj\Debug\AutomobileServiceStation.csproj.GenerateResource.cache
 D:\Visual Studio 2019 projects\InternshipProject\obj\Debug\AutomobileServiceStation.Migrations.ServiceContext.resources
 D:\Visual Studio 2019 projects\InternshipProject\obj\Debug\AutomobileServiceStation.Migrations.ServiceCost.resources
+D:\Visual Studio 2019 projects\InternshipProject\obj\Debug\AutomobileServiceStation.Migrations.checkbox.resources
+D:\Visual Studio 2019 projects\InternshipProject\obj\Debug\AutomobileServiceStation.Migrations.checkboxchange.resources
+D:\Visual Studio 2019 projects\InternshipProject\obj\Debug\AutomobileServiceStation.Migrations.updates.resources
+D:\Visual Studio 2019 projects\InternshipProject\obj\Debug\AutomobileServiceStation.Migrations.newtable.resources
+D:\Visual Studio 2019 projects\InternshipProject\obj\Debug\AutomobileServiceStation.Migrations.contactTable.resources
+D:\Visual Studio 2019 projects\InternshipProject\obj\Debug\AutomobileServiceStation.Migrations.checkboxaddition.resources

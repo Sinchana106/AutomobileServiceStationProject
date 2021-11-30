@@ -10,112 +10,107 @@ using AutomobileServiceStation.Models;
 
 namespace AutomobileServiceStation.Controllers
 {
-    public class ServiceSubTypesController : Controller
+    public class ServicesController : Controller
     {
         private ServiceContext db = new ServiceContext();
 
-        // GET: ServiceSubTypes
+        // GET: Services
         public ActionResult Index()
         {
-            var serviceSubtype = db.serviceSubType.Include(s => s.service);
-            return View(serviceSubtype.ToList());
+            return View(db.services.ToList());
         }
 
-        // GET: ServiceSubTypes/Details/5
+        // GET: Services/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            ServiceSubType serviceSubType = db.serviceSubType.Find(id);
-            if (serviceSubType == null)
+            Service service = db.services.Find(id);
+            if (service == null)
             {
                 return HttpNotFound();
             }
-            return View(serviceSubType);
+            return View(service);
         }
 
-        // GET: ServiceSubTypes/Create
+        // GET: Services/Create
         public ActionResult Create()
         {
-            ViewBag.serviceID = new SelectList(db.services, "id", "name");
             return View();
         }
 
-        // POST: ServiceSubTypes/Create
+        // POST: Services/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "id,name,serviceID,desc")] ServiceSubType serviceSubType)
+        public ActionResult Create([Bind(Include = "id,name,cost,check")] Service service)
         {
             if (ModelState.IsValid)
             {
-                db.serviceSubType.Add(serviceSubType);
+                db.services.Add(service);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.serviceID = new SelectList(db.services, "id", "name", serviceSubType.serviceID);
-            return View(serviceSubType);
+            return View(service);
         }
 
-        // GET: ServiceSubTypes/Edit/5
+        // GET: Services/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            ServiceSubType serviceSubType = db.serviceSubType.Find(id);
-            if (serviceSubType == null)
+            Service service = db.services.Find(id);
+            if (service == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.serviceID = new SelectList(db.services, "id", "name", serviceSubType.serviceID);
-            return View(serviceSubType);
+            return View(service);
         }
 
-        // POST: ServiceSubTypes/Edit/5
+        // POST: Services/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "id,name,serviceID,desc")] ServiceSubType serviceSubType)
+        public ActionResult Edit([Bind(Include = "id,name,cost,check")] Service service)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(serviceSubType).State = EntityState.Modified;
+                db.Entry(service).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.serviceID = new SelectList(db.services, "id", "name", serviceSubType.serviceID);
-            return View(serviceSubType);
+            return View(service);
         }
 
-        // GET: ServiceSubTypes/Delete/5
+        // GET: Services/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            ServiceSubType serviceSubType = db.serviceSubType.Find(id);
-            if (serviceSubType == null)
+            Service service = db.services.Find(id);
+            if (service == null)
             {
                 return HttpNotFound();
             }
-            return View(serviceSubType);
+            return View(service);
         }
 
-        // POST: ServiceSubTypes/Delete/5
+        // POST: Services/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            ServiceSubType serviceSubType = db.serviceSubType.Find(id);
-            db.serviceSubType.Remove(serviceSubType);
+            Service service = db.services.Find(id);
+            db.services.Remove(service);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

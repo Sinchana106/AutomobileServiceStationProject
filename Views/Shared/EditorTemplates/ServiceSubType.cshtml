@@ -1,0 +1,32 @@
+﻿@model AutomobileServiceStation.Models.ServiceSubType
+
+@{
+    ViewBag.Title = "ServSubType";
+}
+
+@using (Html.BeginForm()) {
+
+    <table>
+        <tr>
+            <td>
+                <span>
+                    @Html.HiddenFor(model => model.service.name)
+                    Service @Html.DisplayFor(model => model.service.name)
+                </span>
+            </td>
+            <td>
+                @Html.HiddenFor(model => model.name)
+             Service Sub Type   @Html.DisplayFor(model => model.name)
+            </td>
+            <td>
+                @Html.HiddenFor(model => model.cost)
+              Cost  @Html.DisplayFor(model => model.cost)
+            </td>
+            <td>@Html.CheckBoxFor(model=>model.check)</td>
+        </tr>
+    </table>
+                @*@Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.id })*@
+
+}

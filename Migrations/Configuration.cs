@@ -9,7 +9,7 @@ namespace AutomobileServiceStation.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
             ContextKey = "AutomobileServiceStation.Models.ServiceContext";
         }
 

@@ -168,9 +168,12 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PaymentController.cs" />
     <Compile Include="Controllers\ServicesController.cs" />
+    <Compile Include="Controllers\ServiceSubTypesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -186,13 +189,38 @@
     <Compile Include="Migrations\202111191546471_ServiceCost.Designer.cs">
       <DependentUpon>202111191546471_ServiceCost.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202111251547138_checkbox.cs" />
+    <Compile Include="Migrations\202111251547138_checkbox.Designer.cs">
+      <DependentUpon>202111251547138_checkbox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202111251556517_checkboxchange.cs" />
+    <Compile Include="Migrations\202111251556517_checkboxchange.Designer.cs">
+      <DependentUpon>202111251556517_checkboxchange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202111271206247_updates.cs" />
+    <Compile Include="Migrations\202111271206247_updates.Designer.cs">
+      <DependentUpon>202111271206247_updates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202111271516175_newtable.cs" />
+    <Compile Include="Migrations\202111271516175_newtable.Designer.cs">
+      <DependentUpon>202111271516175_newtable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202111281023379_contactTable.cs" />
+    <Compile Include="Migrations\202111281023379_contactTable.Designer.cs">
+      <DependentUpon>202111281023379_contactTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202111301251549_checkboxaddition.cs" />
+    <Compile Include="Migrations\202111301251549_checkboxaddition.Designer.cs">
+      <DependentUpon>202111301251549_checkboxaddition.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\ContactInfo.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\PaymentInfo.cs" />
     <Compile Include="Models\Service.cs" />
     <Compile Include="Models\ServiceContext.cs" />
-    <Compile Include="Models\ServiceCost.cs" />
     <Compile Include="Models\ServiceSubType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -290,13 +318,24 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Home\Services.cshtml" />
+    <Content Include="Views\Home\Payment.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\Service.cshtml" />
     <Content Include="Views\Services\Create.cshtml" />
     <Content Include="Views\Services\Delete.cshtml" />
     <Content Include="Views\Services\Details.cshtml" />
     <Content Include="Views\Services\Edit.cshtml" />
     <Content Include="Views\Services\Index.cshtml" />
-    <Content Include="Views\Home\Services.cshtml" />
-    <Content Include="Views\Home\Payment.cshtml" />
+    <Content Include="Views\ServiceSubTypes\Create.cshtml" />
+    <Content Include="Views\ServiceSubTypes\Delete.cshtml" />
+    <Content Include="Views\ServiceSubTypes\Details.cshtml" />
+    <Content Include="Views\ServiceSubTypes\Edit.cshtml" />
+    <Content Include="Views\ServiceSubTypes\Index.cshtml" />
+    <Content Include="Views\ServiceSubTypes\ServiceList.cshtml" />
+    <Content Include="Views\ServiceSubTypes\SubList.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\ServiceSubType.cshtml" />
+    <Content Include="Views\Contact\Contact.cshtml" />
+    <Content Include="Views\Payment\Payment.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -323,6 +362,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202111191546471_ServiceCost.resx">
       <DependentUpon>202111191546471_ServiceCost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111251547138_checkbox.resx">
+      <DependentUpon>202111251547138_checkbox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111251556517_checkboxchange.resx">
+      <DependentUpon>202111251556517_checkboxchange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111271206247_updates.resx">
+      <DependentUpon>202111271206247_updates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111271516175_newtable.resx">
+      <DependentUpon>202111271516175_newtable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111281023379_contactTable.resx">
+      <DependentUpon>202111281023379_contactTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111301251549_checkboxaddition.resx">
+      <DependentUpon>202111301251549_checkboxaddition.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

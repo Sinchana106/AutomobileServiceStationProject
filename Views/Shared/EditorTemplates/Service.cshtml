@@ -1,0 +1,13 @@
+﻿@model AutomobileServiceStation.Models.Service
+@{
+    ViewBag.Title = "Service";
+}
+
+@Html.HiddenFor(x => x.id)
+@Html.HiddenFor(x => x.name)
+@Html.HiddenFor(x => x.cost)
+
+<div>
+    <span> @Html.DisplayFor(x => x.name) @Html.CheckBoxFor(x=>x.check)</span>
+</div>
+

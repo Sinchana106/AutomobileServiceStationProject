@@ -11,10 +11,10 @@ namespace AutomobileServiceStation.Models
         public int id { get; set; }
         [Display(Name ="NAME")]
         public string name { get; set; }
-        public string photo { get; set; }
 
-        public string desc { get; set; }
-        public string cost { get; set; }
+        public float? cost { get; set; } = 0;
+
+        public bool check { get; set; } = false;
 
     }
 }

@@ -9,6 +9,8 @@ namespace AutomobileServiceStation.Models
     public class ServiceContext:DbContext
     {
         public DbSet<Service> services { get; set; }
-        public DbSet<ServiceSubType> serviceSubType { get; internal set; }
+        public DbSet<ServiceSubType> serviceSubType { get; set; }
+        public DbSet<ContactInfo> contact { get; set; }
+        public DbSet<PaymentInfo> payment { get; set; }
     }
 }

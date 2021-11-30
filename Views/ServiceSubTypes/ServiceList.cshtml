@@ -1,0 +1,19 @@
+﻿@model IEnumerable<AutomobileServiceStation.Models.Service>
+
+@{
+    ViewBag.Title = "ServiceList";
+}
+
+<h2>ServiceList</h2>
+
+@*<p>
+        @html.actionlink("create new", "create")
+    </p>*@
+@using (Html.BeginForm())
+{
+
+    @Html.EditorForModel();
+    <input type="submit" class="btn btn-success" />
+}
+
+
