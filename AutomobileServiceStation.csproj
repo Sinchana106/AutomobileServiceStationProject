@@ -177,41 +177,17 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202111111256571_InitialCreate.cs" />
-    <Compile Include="Migrations\202111111256571_InitialCreate.Designer.cs">
-      <DependentUpon>202111111256571_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\202112011451038_updatation1.cs" />
+    <Compile Include="Migrations\202112011451038_updatation1.Designer.cs">
+      <DependentUpon>202112011451038_updatation1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202111161205321_ServiceContext.cs" />
-    <Compile Include="Migrations\202111161205321_ServiceContext.Designer.cs">
-      <DependentUpon>202111161205321_ServiceContext.cs</DependentUpon>
+    <Compile Include="Migrations\202112011452001_updatationapp.cs" />
+    <Compile Include="Migrations\202112011452001_updatationapp.Designer.cs">
+      <DependentUpon>202112011452001_updatationapp.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202111191546471_ServiceCost.cs" />
-    <Compile Include="Migrations\202111191546471_ServiceCost.Designer.cs">
-      <DependentUpon>202111191546471_ServiceCost.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202111251547138_checkbox.cs" />
-    <Compile Include="Migrations\202111251547138_checkbox.Designer.cs">
-      <DependentUpon>202111251547138_checkbox.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202111251556517_checkboxchange.cs" />
-    <Compile Include="Migrations\202111251556517_checkboxchange.Designer.cs">
-      <DependentUpon>202111251556517_checkboxchange.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202111271206247_updates.cs" />
-    <Compile Include="Migrations\202111271206247_updates.Designer.cs">
-      <DependentUpon>202111271206247_updates.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202111271516175_newtable.cs" />
-    <Compile Include="Migrations\202111271516175_newtable.Designer.cs">
-      <DependentUpon>202111271516175_newtable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202111281023379_contactTable.cs" />
-    <Compile Include="Migrations\202111281023379_contactTable.Designer.cs">
-      <DependentUpon>202111281023379_contactTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202111301251549_checkboxaddition.cs" />
-    <Compile Include="Migrations\202111301251549_checkboxaddition.Designer.cs">
-      <DependentUpon>202111301251549_checkboxaddition.cs</DependentUpon>
+    <Compile Include="Migrations\202112021316537_deletecost.cs" />
+    <Compile Include="Migrations\202112021316537_deletecost.Designer.cs">
+      <DependentUpon>202112021316537_deletecost.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -333,9 +309,9 @@
     <Content Include="Views\ServiceSubTypes\Index.cshtml" />
     <Content Include="Views\ServiceSubTypes\ServiceList.cshtml" />
     <Content Include="Views\ServiceSubTypes\SubList.cshtml" />
-    <Content Include="Views\Shared\EditorTemplates\ServiceSubType.cshtml" />
     <Content Include="Views\Contact\Contact.cshtml" />
     <Content Include="Views\Payment\Payment.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\ServiceSubType.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -354,32 +330,14 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202111111256571_InitialCreate.resx">
-      <DependentUpon>202111111256571_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202112011451038_updatation1.resx">
+      <DependentUpon>202112011451038_updatation1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202111161205321_ServiceContext.resx">
-      <DependentUpon>202111161205321_ServiceContext.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202112011452001_updatationapp.resx">
+      <DependentUpon>202112011452001_updatationapp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202111191546471_ServiceCost.resx">
-      <DependentUpon>202111191546471_ServiceCost.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202111251547138_checkbox.resx">
-      <DependentUpon>202111251547138_checkbox.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202111251556517_checkboxchange.resx">
-      <DependentUpon>202111251556517_checkboxchange.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202111271206247_updates.resx">
-      <DependentUpon>202111271206247_updates.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202111271516175_newtable.resx">
-      <DependentUpon>202111271516175_newtable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202111281023379_contactTable.resx">
-      <DependentUpon>202111281023379_contactTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202111301251549_checkboxaddition.resx">
-      <DependentUpon>202111301251549_checkboxaddition.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202112021316537_deletecost.resx">
+      <DependentUpon>202112021316537_deletecost.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

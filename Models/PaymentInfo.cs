@@ -19,5 +19,6 @@ namespace AutomobileServiceStation.Models
         public int Zip { get; set; }
 
         public int TransactionId { get; set; }
+        public float total { get; set; }
     }
 }

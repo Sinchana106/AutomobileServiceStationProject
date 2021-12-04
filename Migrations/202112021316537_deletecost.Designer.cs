@@ -7,13 +7,13 @@ namespace AutomobileServiceStation.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class ServiceCost : IMigrationMetadata
+    public sealed partial class deletecost : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(ServiceCost));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(deletecost));
         
         string IMigrationMetadata.Id
         {
-            get { return "202111191546471_ServiceCost"; }
+            get { return "202112021316537_deletecost"; }
         }
         
         string IMigrationMetadata.Source

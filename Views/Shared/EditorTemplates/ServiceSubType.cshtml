@@ -1,32 +1,50 @@
 ﻿@model AutomobileServiceStation.Models.ServiceSubType
 
 @{
-    ViewBag.Title = "ServSubType";
+    Layout = null;
 }
+<style>
+    #SubServices {
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
 
-@using (Html.BeginForm()) {
 
-    <table>
-        <tr>
-            <td>
-                <span>
-                    @Html.HiddenFor(model => model.service.name)
-                    Service @Html.DisplayFor(model => model.service.name)
-                </span>
-            </td>
-            <td>
-                @Html.HiddenFor(model => model.name)
-             Service Sub Type   @Html.DisplayFor(model => model.name)
-            </td>
-            <td>
-                @Html.HiddenFor(model => model.cost)
-              Cost  @Html.DisplayFor(model => model.cost)
-            </td>
-            <td>@Html.CheckBoxFor(model=>model.check)</td>
-        </tr>
-    </table>
-                @*@Html.ActionLink("Edit", "Edit", new { id = item.id }) |
-                @Html.ActionLink("Details", "Details", new { id = item.id }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.id })*@
+        #SubServices td {
+            padding: 8px;
+        }
 
-}
+
+        #SubServices tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        #SubServices tr:hover {
+            background-color: #ddd;
+        }
+</style>
+
+<table id="SubServices"class="table table-striped">
+    <tr>
+        <td>
+            <span style="float:left" >
+                @Html.HiddenFor(model => model.service.name)
+                @Html.DisplayFor(model => model.service.name)
+            </span>
+        </td>
+        <td>
+            @Html.HiddenFor(model => model.name)
+              @Html.DisplayFor(model => model.name)
+        
+            @Html.HiddenFor(model => model.cost)
+            =Rs.  @Html.DisplayFor(model => model.cost)
+        </td>
+        <td><span style="float:right">@Html.CheckBoxFor(model => model.check)</span></td>
+    </tr>
+</table> @*@Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.id })*@
+
+
+

@@ -12,7 +12,7 @@ namespace AutomobileServiceStation.Models
         [Display(Name ="NAME")]
         public string name { get; set; }
 
-        public float? cost { get; set; } = 0;
+        
 
         public bool check { get; set; } = false;
 

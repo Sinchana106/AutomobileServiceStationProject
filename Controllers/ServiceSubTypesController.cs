@@ -15,6 +15,7 @@ namespace AutomobileServiceStation.Controllers
         private ServiceContext db = new ServiceContext();
 
         // GET: ServiceSubTypes
+        [Authorize(Roles = "admin")]
         public ActionResult Index()
         {
             var serviceSubType = db.serviceSubType.Include(s => s.service);
@@ -22,6 +23,7 @@ namespace AutomobileServiceStation.Controllers
         }
 
         // GET: ServiceSubTypes/Details/5
+        [Authorize(Roles = "admin")]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -37,6 +39,7 @@ namespace AutomobileServiceStation.Controllers
         }
 
         // GET: ServiceSubTypes/Create
+        [Authorize(Roles = "admin")]
         public ActionResult Create()
         {
             ViewBag.serviceID = new SelectList(db.services, "id", "name");
@@ -48,6 +51,7 @@ namespace AutomobileServiceStation.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "admin")]
         public ActionResult Create([Bind(Include = "id,name,serviceID,cost")] ServiceSubType serviceSubType)
         {
             if (ModelState.IsValid)
@@ -62,6 +66,7 @@ namespace AutomobileServiceStation.Controllers
         }
 
         // GET: ServiceSubTypes/Edit/5
+        [Authorize(Roles = "admin")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -82,6 +87,7 @@ namespace AutomobileServiceStation.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "admin")]
         public ActionResult Edit([Bind(Include = "id,name,serviceID,cost")] ServiceSubType serviceSubType)
         {
             if (ModelState.IsValid)
@@ -95,6 +101,7 @@ namespace AutomobileServiceStation.Controllers
         }
 
         // GET: ServiceSubTypes/Delete/5
+        [Authorize(Roles = "admin")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -112,6 +119,7 @@ namespace AutomobileServiceStation.Controllers
         // POST: ServiceSubTypes/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "admin")]
         public ActionResult DeleteConfirmed(int id)
         {
             ServiceSubType serviceSubType = db.serviceSubType.Find(id);
@@ -119,13 +127,14 @@ namespace AutomobileServiceStation.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
-
+        
         public ActionResult ServiceList()
         {
             return View(db.services.ToList());
         }
 
         [HttpPost]
+     
         public ActionResult ServiceList(List<Service> slist)
         {
             List<ServiceSubType> sst = new List<ServiceSubType>();
@@ -144,14 +153,17 @@ namespace AutomobileServiceStation.Controllers
                             sst.Add(stype);
                         }
                     }
-                    catch(Exception ex) { }
+                    catch(Exception ex) {
+                        Console.WriteLine(ex);
+                    }
  
                 }
                 Session["sst"] = sst;
             }
             return RedirectToAction("SubList");
         }
-
+        [HttpGet]
+       
         public ActionResult SubList()
         {
             List<ServiceSubType> sst = (List<ServiceSubType>)Session["sst"];
@@ -164,12 +176,14 @@ namespace AutomobileServiceStation.Controllers
             float? total = 0;
                 foreach(ServiceSubType ssubType in sstList)
                 {
-                    if (ssubType.check)
-                    {
-                        total += ssubType.cost;
-                    }
+                if (ssubType.check)
+                {
+                    total += ssubType.cost;
+                }
+                
                 }
             ViewBag.tcost = total;
+            Session["total"] = total;
             return View(sstList);
         }
 

@@ -15,12 +15,14 @@ namespace AutomobileServiceStation.Controllers
         private ServiceContext db = new ServiceContext();
 
         // GET: Services
+        [Authorize(Roles = "admin")]
         public ActionResult Index()
         {
             return View(db.services.ToList());
         }
 
         // GET: Services/Details/5
+        [Authorize(Roles = "admin")]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -36,6 +38,7 @@ namespace AutomobileServiceStation.Controllers
         }
 
         // GET: Services/Create
+        [Authorize(Roles ="admin")]
         public ActionResult Create()
         {
             return View();
@@ -44,6 +47,7 @@ namespace AutomobileServiceStation.Controllers
         // POST: Services/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        [Authorize(Roles = "admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "id,name,cost,check")] Service service)
@@ -59,6 +63,7 @@ namespace AutomobileServiceStation.Controllers
         }
 
         // GET: Services/Edit/5
+        [Authorize(Roles = "admin")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -76,6 +81,7 @@ namespace AutomobileServiceStation.Controllers
         // POST: Services/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        [Authorize(Roles = "admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "id,name,cost,check")] Service service)
@@ -90,6 +96,7 @@ namespace AutomobileServiceStation.Controllers
         }
 
         // GET: Services/Delete/5
+        [Authorize(Roles = "admin")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -104,9 +111,11 @@ namespace AutomobileServiceStation.Controllers
             return View(service);
         }
 
+        [Authorize(Roles = "admin")]
         // POST: Services/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "admin")]
         public ActionResult DeleteConfirmed(int id)
         {
             Service service = db.services.Find(id);

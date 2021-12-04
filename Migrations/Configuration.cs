@@ -9,8 +9,7 @@ namespace AutomobileServiceStation.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true;
-            ContextKey = "AutomobileServiceStation.Models.ServiceContext";
+            AutomaticMigrationsEnabled = false;
         }
 
         protected override void Seed(AutomobileServiceStation.Models.ServiceContext context)

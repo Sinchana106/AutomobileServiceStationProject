@@ -2,16 +2,23 @@
 
 @{
     ViewBag.Title = "ServSubType";
+
 }
 
-<h2>ServSubType</h2>
+
 
 @using (Html.BeginForm())
-{ 
+{
 
-@Html.EditorForModel()
-    <input type="submit" class="btn btn-primary" value="Click" />
-    @ViewBag.tcost
+    <div class="col-md-6">
+        @Html.EditorForModel()
+        <input type="submit" class="btn btn-primary" value="Calculate" /><br />
+        
+        <br /><a href="~/Payment/Payment">Click Here for payment<br /> Total:</a>
+        @ViewBag.tcost
+    </div>
+
 }
+
 
 

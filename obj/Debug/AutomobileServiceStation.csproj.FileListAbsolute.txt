@@ -212,13 +212,7 @@ D:\Visual Studio 2019 projects\InternshipProject\obj\Debug\AutomobileServiceStat
 D:\Visual Studio 2019 projects\InternshipProject\obj\Debug\AutomobileServiceStation.dll
 D:\Visual Studio 2019 projects\InternshipProject\obj\Debug\AutomobileServiceStation.pdb
 D:\Visual Studio 2019 projects\InternshipProject\obj\Debug\AutomobileServiceStation.csproj.AssemblyReference.cache
-D:\Visual Studio 2019 projects\InternshipProject\obj\Debug\AutomobileServiceStation.Migrations.InitialCreate.resources
+D:\Visual Studio 2019 projects\InternshipProject\obj\Debug\AutomobileServiceStation.Migrations.updatation1.resources
 D:\Visual Studio 2019 projects\InternshipProject\obj\Debug\AutomobileServiceStation.csproj.GenerateResource.cache
-D:\Visual Studio 2019 projects\InternshipProject\obj\Debug\AutomobileServiceStation.Migrations.ServiceContext.resources
-D:\Visual Studio 2019 projects\InternshipProject\obj\Debug\AutomobileServiceStation.Migrations.ServiceCost.resources
-D:\Visual Studio 2019 projects\InternshipProject\obj\Debug\AutomobileServiceStation.Migrations.checkbox.resources
-D:\Visual Studio 2019 projects\InternshipProject\obj\Debug\AutomobileServiceStation.Migrations.checkboxchange.resources
-D:\Visual Studio 2019 projects\InternshipProject\obj\Debug\AutomobileServiceStation.Migrations.updates.resources
-D:\Visual Studio 2019 projects\InternshipProject\obj\Debug\AutomobileServiceStation.Migrations.newtable.resources
-D:\Visual Studio 2019 projects\InternshipProject\obj\Debug\AutomobileServiceStation.Migrations.contactTable.resources
-D:\Visual Studio 2019 projects\InternshipProject\obj\Debug\AutomobileServiceStation.Migrations.checkboxaddition.resources
+D:\Visual Studio 2019 projects\InternshipProject\obj\Debug\AutomobileServiceStation.Migrations.updatationapp.resources
+D:\Visual Studio 2019 projects\InternshipProject\obj\Debug\AutomobileServiceStation.Migrations.deletecost.resources
